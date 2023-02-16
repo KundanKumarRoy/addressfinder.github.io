@@ -463,13 +463,13 @@ body {
 .iphoneBack .screen {
     padding: 0 0px 0px;
     height: 340px;
-    background: #242a2f;
+    /* background: #242a2f; */
     overflow: hidden;
     width: 160px;
-    margin: 0 auto 0;
+    /* margin: 0 auto 0; */
     position: relative;
     top: 36px;
-    left: 1px;
+    left: 192px;
 }
  
 
