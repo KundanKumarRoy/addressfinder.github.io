@@ -23,12 +23,35 @@
   <header class="header bg-white" id="navbar">
     <nav class="navbar navbar-expand-lg  ">
       <div class="container">
-        <a class="navbar-brand" href="javascript:void(0);">
+        <a class="navbar-brand d-none d-lg-block" href="javascript:void(0);">
           <img src="assets/image/logo23.svg" alt="......">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <!-- mobile View Toggel/user Profile icon-->
+        <div class="mobile-Navbar d-flex justify-content-center align-items-center d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <img src="https://www.numberdekho.com/public/storage/settings/appicon.png">
+        </div>
+
+        <a class="nav-brand d-flex flex-column  d-lg-none">
+          <i class="fas fa-map-marker-alt mx-auto mt-3 fs-4" style="color:green;"></i>
+          <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><span
+              id="address_value_mobile"></span></button>
+        </a>
+        <ul class="d-block d-lg-none mb-0">
+          <li>
+            <a href="https://www.numberdekho.com/notification_list">
+              <img src="https://www.numberdekho.com/public/assets/front/images/Bell.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+            </a>
+          </li>
+        </ul>
+        <!-- mobile View Toggel/user Profile icon End-->
+
+        <button class="navbar-toggler d-none d-lg-block " type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+
         </button>
         <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarSupportedContent">
           <ul class="navbar-nav d-flex align-items-center ms-auto ">
@@ -49,13 +72,122 @@
       </div>
     </nav>
   </header>
+  <!-- Mobile View navbar --> 
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" style="width:320px">
+    <div class="offcanvas-header" >
+      <a href="https://www.numberdekho.com/my-profile">
+        <div class="left-slidebar-img-box  d-flex justify-content-center align-items-center d-lg-none">
+        <img src="https://www.numberdekho.com/public/storage/settings/appicon.png" style="border-radius: 100%;" width="50" height="50">
+      </div>
+    </a> 
+    </div>
+    <div class="offcanvas-body p-0">
+
+      <ul class="nav-menu d-lg-none d-block p-0">
+        <li class="">
+          <a href="https://www.numberdekho.com/my-business-list" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/office bag.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        My Business</a></li>
+        <li class="#"><a href="#" onclick="close_sidebar()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom1" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/Activity.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        List Your Business</a></li>
+        <li class=""><a href="#" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/Vector.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Activity</a></li>
+        <li class=""><a href="#" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/call.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Call History</a></li>
+        <li class=""><a href="https://www.numberdekho.com/settings" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/fi_settings.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Settings</a></li>
+        <li class=""><a href="https://www.numberdekho.com/wishlist" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/Heart.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Favorites</a></li>
+
+        <li class=""><a href="tel:8585952324" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/telephone-call.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Customer Support</a></li>
+
+        <li class=""><a href="https://api.whatsapp.com/send?phone=8585952324&amp;text=Hi" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/telephone-call.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        What'sApp Support</a></li>
+
+        <li class=""><a href="tel:8585952324" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/telephone-call.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Call To Register</a></li>
+
+        <li class=""><a onclick="close_sidebar()" class="d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#chnagelanguage">
+          <img src="https://www.numberdekho.com/public/assets/front/images/language.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Change Language</a></li>
+       
+        <li class=" "><a href="https://play.google.com/store/apps/details?id=com.numberdekho" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/share.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Share the App</a></li>
+        <li class=" "><a href="https://play.google.com/store/apps/details?id=com.numberdekho" class="d-flex align-items-center">
+          <img src="https://www.numberdekho.com/public/assets/front/images/star.png" class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+        Rate Us</a></li>
+        <!--  -->
+      </ul>
+      <div class=" text-center d-md-none d-flex border py-2 justify-content-center align-items-center">
+        <a href="" class="mobile-menu-social-icon">
+          <img src="https://www.numberdekho.com/public/assets/front/images/f-book.png" class="img-fluid me-3 " alt="..." >
+        </a>
+        <a href="" class="mobile-menu-social-icon">
+          <img src="https://www.numberdekho.com/public/assets/front/images/insta.png" class="img-fluid me-3 " alt="..." >
+        </a>
+        <a href="" class="mobile-menu-social-icon">
+          <img src="https://www.numberdekho.com/public/assets/front/images/twiter.png" class="img-fluid me-3 " alt="..." >
+        </a>
+      </div>
+      <div class=" text-center d-md-none d-block">
+        <a href="https://www.numberdekho.com/login" class="btn bg-green mt-3 rounded text-white ">
+          <i class="fa fa-sign-in" aria-hidden="true"></i> 
+        Login
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <!--  -->
+
+  <!-- Location slector Bottom Canva -->
+  <div class="offcanvas offcanvas-bottom bottom-canva" tabindex="-1" id="offcanvasBottom"
+    aria-labelledby="offcanvasBottomLabel" aria-modal="true" role="dialog">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">Select a Location</h5>
+    </div>
+    <div class="offcanvas-body small">
+      <form>
+        <div class="d-flex mb-4 p-0 align-itmes-center border-dark border" role="search"
+          style="border:1px solid #e4e4e4; background: #FEFDFE;">
+          <button class="d-flex justify-content-center align-items-center btn me-2" type="submit"
+            style="border-right:1px solid #e4e4e4;"><i class="fas fa-search"></i></button>
+          <input class="form-control cus-form bg-none" type="text" id="addressTextField" placeholder="Search..."
+            aria-label="Search" autocomplete="off">
+        </div>
+        <div class="mb-3">
+          <label onclick="get_current_location()" for="formGroupExampleInput2" class="form-label fs-4"><i
+              class="fas fa-map-marker-alt fs-4 me-2"></i>Use
+            Current
+            Loaction</label>
+
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+
+
+
+
   <!--*********************** Home Page Banner *********************** -->
   <div class="home-banner sec-bg py-md-5 py-3 px-3">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <!-- Banner Title -->
-          <div class="mb-4 text-center d-none d-md-block">
+          <div class="mb-5 text-center d-none d-md-block">
             <h1 class="mb-1"><span class="color-green fw-bold">Apka
                 Number</span><br>NumberDekho Se Mila Hai</h1>
           </div>
@@ -86,7 +218,8 @@
   <section class="py-md-5 py-3 sec-bg">
     <div class="container">
       <div class="sec-heading-title mb-3">
-        <h3 class="my-3  mont-medium fw-bold ms-2 text-md-center">Popular <span class="color-green">Services</span> Categories</h3>
+        <h3 class="my-3  mont-medium fw-bold ms-2 text-md-center">Popular <span class="color-green">Services</span>
+          Categories</h3>
       </div>
       <div class="row">
 
@@ -334,7 +467,8 @@
   <section class="py-md-5 py-3 sec-bg">
     <div class="container">
       <div class="sec-heading-title mb-3">
-        <h3 class="my-3  mont-medium fw-bold ms-2 text-md-center">Popular <span class="color-green">Shops</span> Categories</h3>
+        <h3 class="my-3  mont-medium fw-bold ms-2 text-md-center">Popular <span class="color-green">Shops</span>
+          Categories</h3>
       </div>
       <div class="row">
 
@@ -942,7 +1076,7 @@
         <div class="col-12 col-lg-6">
           <div class="row iphone-back">
             <div class="iphoneBack">
-             <div class="screen">
+              <div class="screen">
                 <div class="swiper-container">
                   <div class="swiper-wrapper">
                     <img class="mySlides " src="https://www.numberdekho.com/public/assets/front/img/scr-1.png"
@@ -951,7 +1085,7 @@
                       alt="img2" style="display: block;">
                   </div>
                 </div>
-              </div> 
+              </div>
             </div>
           </div>
         </div>
@@ -978,7 +1112,7 @@
         <div class="col-12 col-md-4 d-none d-md-block">
           <span class="text-white">Subscribe Our News Letter</span>
           <form class="d-flex align-items-center" role="search">
-            <input class="form-control me-2 cus-from rounded" type="search" placeholder="Enuter Your Email"
+            <input class="form-control me-2 cus-form rounded" type="search" placeholder="Enuter Your Email"
               aria-label="Search">
             <button class="btn bg-white text-dark cus-btn rounded" type="submit">Submit</button>
           </form>
