@@ -451,7 +451,11 @@ body {
 /* ======================= Mobil View ====================== */
 
 .iphone-back{
-    background: url('../image/iphone-back.png') no-repeat center top;
+    width: 100%;
+    background: url('../image/iphone-back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center left;
     height: 495px;
 }
 .iphoneBack {
