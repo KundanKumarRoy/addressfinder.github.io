@@ -236,6 +236,7 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 15px;
+    width: 30%;
 }
 
 .main-search .form-control {
@@ -416,21 +417,28 @@ body {
 
 /* ======================= Mobil View ====================== */
 
+.iphone-back{
+    background: url('../image/iphone-back.png') no-repeat center top;
+    height: 495px;
+}
 .iphoneBack {
-    background: url('../image/iphone33.png') no-repeat center top;
-    height: 415px;
+    background: url('../image/iphone.png') no-repeat center top;
+    height: 495px;
+    margin-top: 65px;
 }
 
 .iphoneBack .screen {
     padding: 0 0px 0px;
-    height: 341px;
+    height: 340px;
     background: #242a2f;
     overflow: hidden;
-    width: 159px;
+    width: 160px;
     margin: 0 auto 0;
     position: relative;
-    top: 34px;
+    top: 36px;
+    left: 1px;
 }
+ 
 
 .swiper-container {
     width: 100%;
