@@ -1,0 +1,58 @@
+/* =============== Mobile View Responsive design ==========================*/
+@media (max-width:620px){
+    .sec-bg{
+        background-color: #fff;
+    }
+    .category-item-search{
+        border: 1px solid #a0a2a3;
+    }
+
+    /* Popular Services  */
+    .sec-heading-title h2 {
+        font-size: 14px;
+    }
+    .nd-catg-wrap { 
+        height: 80px; 
+        padding: 0;
+        margin: 0;
+    }
+    .nd-catg-icon img{
+        width:30px;
+         height: 30px;
+    }
+    .nd-catg-icon {
+        height: 22px;
+    background: none !important;
+    }
+    .nd-catg-caption h4{
+        font-size: 12px;
+    }
+    /* Advertiesment banner style */
+    .advertiesment-banner { 
+        height: 325px!important;
+    }
+    .counter-effect:before { 
+        left: 111px;
+        bottom: -10px;
+        width: 140px; 
+    }
+    /* popural outlet */
+    .our-popular img {
+        height: 140px!important;
+    }
+    /* Footer banner */
+    .footer-banner {
+        height: 121px!important;
+        margin-bottom: 120px;
+    }
+}
+
+/* ======================== Tablate View Responsive Design ==================================== */
+/* @media (max-width:820px){
+    .advertiesment-banner { 
+        height: 185px;
+}
+.advertiesment-banner h5{ 
+ font-size: 16px!important;
+}
+} */
