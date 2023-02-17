@@ -767,7 +767,7 @@ input {
 .vrt-list-thumb .vrt-list-thumb-figure img {
     height: 280px;
     width: 300px;
-    /* object-fit: cover; */
+    object-fit: cover;  
 }
 .red-heart-box {
     top: 10px;
