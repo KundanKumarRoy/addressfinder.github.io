@@ -47,7 +47,47 @@
         height: 55px!important;
         margin-bottom: 120px;
     }
-  
+   /* ========================================================================
+                         Service listing page Responsive
+    ===========================================================================*/
+   .input-group { 
+    align-items: center; 
+    border: 1px solid #c5c0c0 !important;
+}
+
+/*===================== Right Section =================== */
+.vrt-list-wrap {
+    border: 1px solid #FEA800;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px #ffb34d, 0px 0px 4px #ffb34d;
+}
+.vrt-list-wrap-head {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.vrt-list-thumb {
+    min-width: 120px !important;
+    margin: 0px;
+}
+.vrt-list-thumb .vrt-list-thumb-figure img {
+    height: 130px !important;
+    width: 107px !important; 
+    border-radius: 8px;
+}
+.shop-title{
+    font-size: 16px;
+}
+.line-height-1 {
+    line-height: 1 !important;
+}
+.mobile-service-title {
+    font-size: 13px;
+}
+.vrt-list-amenties ul li {
+    margin: 0 !important;
+    font-size: 10px !important;
+}
 }
 
 /* ======================== Tablate View Responsive Design ==================================== */
