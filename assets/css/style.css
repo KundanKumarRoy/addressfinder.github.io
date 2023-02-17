@@ -618,3 +618,226 @@ ul.list-inline li {
 .border-btm {
     border-bottom: 5px solid #dee2e6 !important;
 }
+
+/* ========================================================================
+                         Service listing page style
+============================================================================*/
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.input-group > .form-control{
+height: 54px !important;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 1px;
+    border-color: transparent!important;
+    color: #2b2e30;
+    box-shadow: none!important;
+    outline: none!important;
+}
+.input-group>.form-control, .input-group>.form-select {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
+.btn-successsendotp {
+    padding: 12px 25px;
+    color: #fff;
+    background-color: var(--green)!important;
+    border-color:var(--green) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+    border-radius: -0.9rem; 
+}
+/* Service listing sidebar styleing */
+.side-filter-box {
+    background: #ffffff;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: sticky;
+    padding: 1rem;
+    top: auto;
+    align-self: flex-end;
+    bottom: 0;
+}
+.inner_widget_link {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+    margin-left: 0;
+}
+.checkbox-custom, .radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+input {
+    font-size: 18px;
+    padding: 5px;
+    height: 35px;
+    width: 350px;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 5px;
+}
+.checkbox-custom-label, .radio-custom-label {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+}
+.checkbox-custom:checked+.checkbox-custom-label:before {
+    background: rgba(5, 175, 120, 0.1);
+    border-radius: 2px;
+    border: none;
+}
+
+.checkbox-custom+.checkbox-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 2px solid #dae3ec;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+.checkbox-custom:checked+.checkbox-custom-label:after {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    font-size: 10px;
+    color: var(--green);
+}
+.d14ixh {
+    color: #cc0000 !important;
+}
+
+/* Service listing right section */
+.vrt-list-wrap {
+    position: relative;
+    background: #ffffff;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    display: block;
+}
+.vrt-list-wrap-head {
+    position: relative;
+    display: flex;
+    padding: 0.5rem;
+    flex-wrap: initial;
+    /* align-items: center; */
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.vrt-list-thumb {
+    flex: 1;
+    margin-right: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 250px;
+}
+.vrt-list-thumb .vrt-list-thumb-figure {
+    height: 100%;
+}
+.vrt-list-thumb .vrt-list-thumb-figure img {
+    height: 280px;
+    width: 300px;
+    /* object-fit: cover; */
+}
+.red-heart-box {
+    top: 10px;
+    right: 20px;
+}
+.form-check-input.red-heart-check {
+    background-color: transparent !important;
+    /* border-color: #0d6efd; */
+}
+
+.form-check-input.red-heart-check {
+    height: 25px !important;
+    width: 25px !important;
+    box-shadow: none !important;
+    border: none !important; 
+    background-image: url(https://numberdekho.com/website/public/assets/front/images/wishlist.png) !important;
+}
+.vrt-list-content h4 {
+    line-height: 1.2;
+}
+span.verified-badge {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    color: #0fb351;
+}
+.Goodup-ft-first {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    position: relative;
+}
+.Goodup-rating {
+    display: inline-flex;
+    position: relative;
+    margin-right: 10px;
+    align-items: center;
+}
+.Goodup-rates {
+    font-size: 9px;
+    color: #ff9800;
+}
+.Goodup-price-range {
+    font-size: 12px;
+    color: #989bb1;
+}
+.vrt-list-amenties ul {
+    margin: 0;
+    padding: 0;
+}
+.vrt-list-amenties ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 5px 12px 5px 0;
+    color: #1a1a1a;
+}
+.vrt-list-features ul li {
+    display: inline-block;
+    list-style: none;
+}
+.vrt-list-features ul li a {
+    margin: 3px 5px 4px 0px;
+    display: inline-block;
+    padding: 2px 8px;
+    background: #f4f5f7;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all ease 0.4s;
+}
+.vrt-list-desc>p {
+    line-height: 1.2 !important;
+}
