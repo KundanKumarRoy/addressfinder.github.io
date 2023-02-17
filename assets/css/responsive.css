@@ -88,6 +88,20 @@
     margin: 0 !important;
     font-size: 10px !important;
 }
+
+/* =================================business-details-banner section style ====================== */
+.business-details-banner{
+    width: 100%;
+    height: 160px; 
+    background-image:none!important;
+}
+.profile-title-box{
+    width: 100%!important;
+}
+.busines-details-profile-image {
+    width: 181px;
+    height: 150px; 
+}
 }
 
 /* ======================== Tablate View Responsive Design ==================================== */
@@ -95,5 +109,9 @@
     .location-search, .category-item-search{
         width: 40%;
     }
- 
+    .business-details-banner {
+        width: 100%;
+        height: 271px;
+    }
+     
 }  
