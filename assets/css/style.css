@@ -767,7 +767,7 @@ input {
 .vrt-list-thumb .vrt-list-thumb-figure img {
     height: 280px;
     width: 300px;
-    object-fit: cover;  
+     object-fit: cover;  
 }
 .red-heart-box {
     top: 10px;
@@ -794,23 +794,23 @@ span.verified-badge {
     top: 2px;
     color: #0fb351;
 }
-.Goodup-ft-first {
+.nd-ft-first {
     display: inline-flex;
     align-items: center;
     width: auto;
     position: relative;
 }
-.Goodup-rating {
+.nd-rating {
     display: inline-flex;
     position: relative;
     margin-right: 10px;
     align-items: center;
 }
-.Goodup-rates {
+.nd-rates {
     font-size: 9px;
     color: #ff9800;
 }
-.Goodup-price-range {
+.nd-price-range {
     font-size: 12px;
     color: #989bb1;
 }
@@ -840,4 +840,63 @@ span.verified-badge {
 }
 .vrt-list-desc>p {
     line-height: 1.2 !important;
+}
+/* =================================business-details-banner section style ====================== */
+.business-details-banner{
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgb(232 230 230 / 67%), rgb(205 201 201 / 69%)),url('../image/profile-banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.busines-details-profile-image{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #fff;
+    overflow: hidden;
+}
+.profile-title-box{
+    height: 120px;
+}
+.busines-details-profile-image img{
+    width: 100%;
+    height: 100%;
+     object-fit: fill;
+}
+.radius-15{
+    border-radius: 15px;
+}
+.card-img-top{
+    height: 150px;
+    /* object-fit: contain; */
+}
+.review-img{
+    width:60px; height:60px;
+    border-radius:100%; 
+    border:1px solid green;
+}
+.review-img img{
+    width:100%; 
+    height:100%; 
+    border-radius:100%; 
+}
+.form-check-input:checked[type=checkbox] {
+    --bs-form-check-bg-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e);
+}
+.form-check-input:checked {
+    background-color: transparent!important;
+    border-color: transparent!important;
+}
+
+.form-check-input { 
+    background-image: url();
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+     
+}
+.margin-bottom{
+    margin-bottom: 100px;
 }
