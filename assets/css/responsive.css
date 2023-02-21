@@ -3,6 +3,9 @@
     .sec-bg{
         background-color: #fff;
     }
+    .sec-margin-bottom{
+        margin-bottom: 100px;
+    }
     .category-item-search{
         border: 1px solid #a0a2a3;
         width: 100%;
@@ -113,5 +116,15 @@
         width: 100%;
         height: 271px;
     }
+    #servicelisting{
+        display: none;
+    }
      
 }  
+/* ======================== Desktop  View Responsive Design ==================================== */
+
+@media (min-width:992px){
+    #servicelisting{
+        display: block!important;
+    }
+}
