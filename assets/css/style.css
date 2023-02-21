@@ -197,9 +197,7 @@ body {
 .gap {
     gap: 10px;
 }
-.sec-margin-bootom{
-    margin-bottom: 100px;
-}
+
 /* ======== BackGround ========*/
 .bg-green {
     background-color: var(--green);
@@ -887,7 +885,24 @@ span.verified-badge {
 .margin-bottom{
     margin-bottom: 100px;
 }
-
+ 
+.related-category li a{
+    display: inline-block;
+    position: relative;
+    margin-right: 10px; 
+    font-size: 14px; 
+    
+}
+.related-category li a:hover{
+    color: var(--green);
+    
+}
+.related-category li a::after{
+    content: ",";
+    position: absolute; 
+    bottom: 0;
+  
+}
 /* ================================= Profile page  style ====================== */
 .profile-cover{
     width: 100%;
