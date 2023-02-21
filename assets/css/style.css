@@ -192,6 +192,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     font-family: 'Jost', sans-serif;
+    user-select: none;
 }
 
 .gap {
@@ -204,7 +205,7 @@ body {
 }
 
 .sec-bg {
-    background: var(--section-bg);
+    background: #fff;
 }
 
 /* ======== Color ========*/
@@ -1002,3 +1003,6 @@ span.verified-badge {
     outline: none!important;
     
 }
+/* ========================================================================
+                                Costome Places
+============================================================================*/
