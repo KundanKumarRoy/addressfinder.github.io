@@ -269,7 +269,7 @@ body {
 .location-search,
 .category-item-search {
     background: #fff;
-    border: none;
+    border: 1px solid var(--green);
     display: flex;
     align-items: center;
     padding: 10px 15px;
