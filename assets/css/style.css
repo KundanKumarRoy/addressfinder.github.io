@@ -70,6 +70,7 @@
         opacity: 1;
     }
 }
+
 /*======== Fonts ======== */
 .carme {
     font-family: 'Carme', sans-serif;
@@ -216,7 +217,7 @@ body {
 .sec-heading-title {
     color: #313030;
 }
-
+/*======== ovbject fit========  */
 /* ======== Hover ========*/
 .hover-green:hover {
     color: var(--green);
@@ -227,33 +228,39 @@ body {
 }
 
 /* Mobile Navbar top style*/
-.header{
+.header {
     height: 67px;
 }
+
 .mobile-Navbar {
     width: 50px;
     height: 50px;
     background: #f4e5ea;
     border-radius: 50%;
 }
-.mobile-Navbar img{
-    border-radius: 100%; 
-     width:50px; 
-     height:50px;
+
+.mobile-Navbar img {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
 }
+
 .nav-menu>li>a {
     padding: 9px 15px 9px 26px;
 }
+
 .nav-menu>li {
     width: 100%;
     position: relative;
     border-top: solid 1px #f0f0f0;
 }
-.mobile-menu-social-icon{
-    width:20px;
-    height:20px;
+
+.mobile-menu-social-icon {
+    width: 20px;
+    height: 20px;
     margin-right: 16px;
 }
+
 .left-slidebar-img-box {
     width: 70px;
     height: 70px;
@@ -261,19 +268,38 @@ body {
     border-radius: 100%;
     margin: 12px 15px 12px 26px;
 }
+/* ================================ Go to the top ================================ */
+#myBtn {
+    /* display: none; */
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 102;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color:  #fff;
+    cursor: pointer;
+    padding: 0px!important;
+    
+  } 
+/* ================================ Go to The top  ================================ */
 /*================================ Home Page style ================================ */
 
-  .home-banner h1{
+.home-banner h1 {
     font-size: 50px;
-}  
+}
+
 .location-search,
 .category-item-search {
     background: #fff;
     border: 1px solid var(--green);
     display: flex;
     align-items: center;
-    padding: 10px 15px;
+    padding: 7px 15px;
     width: 30%;
+    height: 40px;
 }
 
 .main-search .form-control {
@@ -284,9 +310,9 @@ body {
 }
 
 .main-search-button .btn {
-    height: 56px;
-    width: 120px;
-    border: none;
+    height: 40px;
+    width: 100px;
+    border: 1px solid var(--green);
     border-radius: 0 6px 6px 0;
     cursor: pointer;
     display: inline-flex;
@@ -298,6 +324,9 @@ body {
     color: #000;
 }
 
+.hrs {
+    border-top: var(--bs-border-width) solid #decfcf !important
+}
 
 /*================================ Popular Services Category ================================ */
 .sec-heading-title h2 {
@@ -454,13 +483,14 @@ body {
 
 /* ======================= Mobil View ====================== */
 
-.iphone-back{ 
-    background: url('../image/iphone-back.png')   ; 
+.iphone-back {
+    background: url('../image/iphone-back.png');
     height: 495px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .iphoneBack {
     background: url('../image/iphone.png') no-repeat center top;
     height: 495px;
@@ -478,7 +508,7 @@ body {
     top: 36px;
     /* left: 192px; */
 }
- 
+
 
 .swiper-container {
     width: 100%;
@@ -517,7 +547,7 @@ body {
     border-radius: 1px;
     border-color: #eee;
     color: #2b2e30;
-    box-shadow: none!important;
+    box-shadow: none !important;
 
 }
 
@@ -590,7 +620,8 @@ ul.list-inline li {
 
 .bottom-nav {
     box-shadow: 0px -3px 2px 0px #eeeeee;
-} 
+    z-index: 100000; 
+}
 
 .bottom-nav-list {
     height: 75px
@@ -601,7 +632,7 @@ ul.list-inline li {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+
 }
 
 .addbusiness-icon {
@@ -623,34 +654,46 @@ ul.list-inline li {
 /* ========================================================================
                          Service listing page style
 ============================================================================*/
+ 
+
 .input-group {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     width: 100%;
+    height: 45px !important;
+
 }
-.input-group > .form-control{
-height: 54px !important;
+
+.input-group>.form-control {
+    /* height: 40px !important; */
     padding: 10px 15px;
     font-size: 15px;
     border-radius: 1px;
-    border-color: transparent!important;
+    border-color: transparent !important;
     color: #2b2e30;
-    box-shadow: none!important;
-    outline: none!important;
+    box-shadow: none !important;
+    outline: none !important;
 }
-.input-group>.form-control, .input-group>.form-select {
+.input-group> .btn{
+     height: 45px !important;  
+    
+}
+
+.input-group>.form-control,
+.input-group>.form-select {
     position: relative;
     flex: 1 1 auto;
     width: 1%;
     min-width: 0;
 }
+
 .btn-successsendotp {
     padding: 12px 25px;
     color: #fff;
-    background-color: var(--green)!important;
-    border-color:var(--green) !important;
+    background-color: var(--green) !important;
+    border-color: var(--green) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -658,8 +701,9 @@ height: 54px !important;
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;
-    border-radius: -0.9rem; 
+    border-radius: -0.9rem;
 }
+
 /* Service listing sidebar styleing */
 .side-filter-box {
     background: #ffffff;
@@ -674,22 +718,29 @@ height: 54px !important;
     align-self: flex-end;
     bottom: 0;
 }
+
 .inner_widget_link {
     padding: 1rem 0;
     border-bottom: 1px solid #eeeeee;
 }
 
-.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+.checkbox-custom,
+.checkbox-custom-label,
+.radio-custom,
+.radio-custom-label {
     display: inline-block;
     vertical-align: middle;
     margin: 5px;
     cursor: pointer;
     margin-left: 0;
 }
-.checkbox-custom, .radio-custom {
+
+.checkbox-custom,
+.radio-custom {
     opacity: 0;
     position: absolute;
 }
+
 input {
     font-size: 18px;
     padding: 5px;
@@ -700,11 +751,14 @@ input {
     outline: none !important;
     border-radius: 5px;
 }
-.checkbox-custom-label, .radio-custom-label {
+
+.checkbox-custom-label,
+.radio-custom-label {
     position: relative;
     width: 100%;
     font-size: 14px;
 }
+
 .checkbox-custom:checked+.checkbox-custom-label:before {
     background: rgba(5, 175, 120, 0.1);
     border-radius: 2px;
@@ -724,6 +778,7 @@ input {
     margin-right: 10px;
     text-align: center;
 }
+
 .checkbox-custom:checked+.checkbox-custom-label:after {
     content: "\f058";
     font-family: "Font Awesome 5 Free";
@@ -733,6 +788,7 @@ input {
     font-size: 10px;
     color: var(--green);
 }
+
 .d14ixh {
     color: #cc0000 !important;
 }
@@ -745,6 +801,7 @@ input {
     border-radius: 6px;
     display: block;
 }
+
 .vrt-list-wrap-head {
     position: relative;
     display: flex;
@@ -752,9 +809,11 @@ input {
     flex-wrap: initial;
     /* align-items: center; */
 }
+
 .shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
 }
+
 .vrt-list-thumb {
     flex: 1;
     margin-right: 1rem;
@@ -762,18 +821,22 @@ input {
     overflow: hidden;
     min-width: 250px;
 }
+
 .vrt-list-thumb .vrt-list-thumb-figure {
     height: 100%;
 }
+
 .vrt-list-thumb .vrt-list-thumb-figure img {
     height: 280px;
     width: 300px;
-     object-fit: cover;  
+    object-fit: cover;
 }
+
 .red-heart-box {
     top: 10px;
     right: 20px;
 }
+
 .form-check-input.red-heart-check {
     background-color: transparent !important;
     /* border-color: #0d6efd; */
@@ -783,52 +846,62 @@ input {
     height: 25px !important;
     width: 25px !important;
     box-shadow: none !important;
-    border: none !important; 
+    border: none !important;
     background-image: url(https://numberdekho.com/website/public/assets/front/images/wishlist.png) !important;
 }
+
 .vrt-list-content h4 {
     line-height: 1.2;
 }
+
 span.verified-badge {
     margin-left: 5px;
     position: relative;
     top: 2px;
     color: #0fb351;
 }
+
 .nd-ft-first {
     display: inline-flex;
     align-items: center;
     width: auto;
     position: relative;
 }
+
 .nd-rating {
     display: inline-flex;
     position: relative;
     margin-right: 10px;
     align-items: center;
 }
+
 .nd-rates {
     font-size: 9px;
     color: #ff9800;
 }
+
 .nd-price-range {
     font-size: 12px;
     color: #989bb1;
 }
+
 .vrt-list-amenties ul {
     margin: 0;
     padding: 0;
 }
+
 .vrt-list-amenties ul li {
     list-style: none;
     display: inline-block;
     margin: 5px 12px 5px 0;
     color: #1a1a1a;
 }
+
 .vrt-list-features ul li {
     display: inline-block;
     list-style: none;
 }
+
 .vrt-list-features ul li a {
     margin: 3px 5px 4px 0px;
     display: inline-block;
@@ -839,78 +912,92 @@ span.verified-badge {
     font-weight: 500;
     transition: all ease 0.4s;
 }
+
 .vrt-list-desc>p {
     line-height: 1.2 !important;
 }
+
 /* =================================business-details-banner section style ====================== */
-.business-details-banner{
+.business-details-banner {
     width: 100%;
     height: 400px;
-    background: linear-gradient(rgb(232 230 230 / 67%), rgb(205 201 201 / 69%)),url('../image/profile-banner.jpg');
+    background: linear-gradient(rgb(232 230 230 / 67%), rgb(205 201 201 / 69%)), url('../image/profile-banner.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
-.busines-details-profile-image{
+
+.busines-details-profile-image {
     width: 200px;
     height: 200px;
     border: 1px solid #fff;
     overflow: hidden;
 }
-.profile-title-box{
+
+.profile-title-box {
     height: 120px;
 }
-.busines-details-profile-image img{
+
+.busines-details-profile-image img {
     width: 100%;
     height: 100%;
-     object-fit: fill;
+    object-fit: fill;
 }
-.radius-15{
+
+.radius-15 {
     border-radius: 15px;
 }
-.card-img-top{
+
+.card-img-top {
     height: 150px;
     /* object-fit: contain; */
 }
-.review-img{
-    width:60px; height:60px;
-    border-radius:100%; 
-    border:1px solid green;
-}
-.review-img img{
-    width:100%; 
-    height:100%; 
-    border-radius:100%; 
+
+.review-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 1px solid green;
 }
 
-.margin-bottom{
+.review-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.margin-bottom {
     margin-bottom: 100px;
 }
- 
-.related-category li a{
+
+.related-category li a {
     display: inline-block;
     position: relative;
-    margin-right: 10px; 
-    font-size: 14px; 
-    
+    margin-right: 10px;
+    font-size: 14px;
+
 }
-.related-category li a:hover{
+
+.related-category li a:hover {
     color: var(--green);
-    
+
 }
-.related-category li a::after{
+
+.related-category li a::after {
     content: ",";
-    position: absolute; 
+    position: absolute;
     bottom: 0;
-  
+
 }
+
 /* ================================= Profile page  style ====================== */
-.profile-cover{
+.profile-cover {
     width: 100%;
-    height: 290px;  
+    height: 290px;
     position: relative;
 }
-.profile-cover::before{
+
+.profile-cover::before {
     position: absolute;
     content: '';
     background: #000000;
@@ -921,17 +1008,20 @@ span.verified-badge {
     z-index: 1;
     opacity: 0.3;
 }
-.my-profile-image{
+
+.my-profile-image {
     width: 150px;
     height: 150px;
     border: 4px solid rgba(255, 255, 255, 0.2);
     overflow: hidden;
 }
-.my-profile-image img{
+
+.my-profile-image img {
     width: 100%;
     height: 100%;
-     object-fit: fill;
+    object-fit: fill;
 }
+
 .nd-dashboard-nav {
     display: block;
     border-radius: 6px;
@@ -939,14 +1029,17 @@ span.verified-badge {
     z-index: 1;
     background: #fff;
 }
+
 .nd-dashboard-inner {
     position: relative;
     display: block;
     padding: 10px 0 25px 0;
 }
+
 .nd-dashboard-nav ul:first-child {
     margin: 30px 0 0 0;
 }
+
 .nd-dashboard-nav ul:before {
     content: attr(data-submenu-title);
     padding: 0 30px;
@@ -956,6 +1049,7 @@ span.verified-badge {
     font-weight: 500;
     font-size: 14px;
 }
+
 .nd-dashboard-nav ul li {
     display: block;
     border-left: 3px solid transparent;
@@ -963,6 +1057,7 @@ span.verified-badge {
     line-height: 20px;
     font-size: 14px;
 }
+
 .nd-dashboard-nav ul li a {
     color: #555962;
     display: block;
@@ -974,13 +1069,18 @@ span.verified-badge {
     font-size: 15px;
     letter-spacing: 0.5px;
 }
-.nd-dashboard-nav ul li.active a, .nd-dashboard-nav ul li:hover a {
+
+.nd-dashboard-nav ul li.active a,
+.nd-dashboard-nav ul li:hover a {
     color: var(--green);
 }
-.nd-dashboard-nav ul li.active, .nd-dashboard-nav ul li:hover {
+
+.nd-dashboard-nav ul li.active,
+.nd-dashboard-nav ul li:hover {
     border-color: var(--green);
     background-color: rgba(27, 244, 59, 0.1);
 }
+
 /* .dash-figure-thumb img{
     height: 170px; 
     width: 170px;
@@ -998,11 +1098,135 @@ span.verified-badge {
     text-align: center;
 }
 
-.custome-form-select{
-    box-shadow: none!important;
-    outline: none!important;
-    
+.custome-form-select {
+    box-shadow: none !important;
+    outline: none !important;
+
 }
+
 /* ========================================================================
-                                Costome Places
+                              About Us Page
 ============================================================================*/
+.abt-banner-img {
+    width: 100%;
+    height: calc(100vh - 87px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.height {
+    height: 100% !important;
+}
+
+ 
+
+/* .ndprocced-flow .nav-link.active {
+    background: none!important;
+}
+.ndprocced-flow .nav-link.active span.ndproceesBtn {
+    background: #18A10B!important;
+    color: #fff!important;
+} 
+  */
+/* .ndbdre-prosecclft {
+    position: relative;
+}
+.ndbdre-prosecclft:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    height: 92%;
+    width: 2px;
+    background: #E1F3DF;
+}
+.ndprocced-flow .nav-link {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    text-align: right;
+}
+.ndproceesNum{
+    width: 19px;
+    height: 32px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 32px;
+    box-shadow: 0 0 0 7px #e1f3df;
+    font-size: 13px;
+}
+.ndprocessbtn{
+    width: 91%;
+    margin-left: 9%;
+    font-size: 13px;
+}
+
+.ndprocced-flow span.ndproceesNum {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 32px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 12px #e1f3df;
+    background: #C7E9C5;
+    color: #18A10B;
+    text-align: center;
+    font-size: 22px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+.ndprocced-flow .nav-link span.ndproceesBtn {
+    display: inline-block;
+    padding: 14px 20px;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #E6E6E6;
+    width: 90%;
+    margin-left: 9%;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+} */
+
+/* ========================================================================
+                            sitemap Page
+============================================================================*/
+.sitemap-banner-img {
+    width: 100%;
+    height: calc(50vh - 87px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.accordion.sitmap {
+    --bs-accordion-border-width: none!important;
+}
+.sitmap .accordion-button:focus { 
+    border-color: none!important;;
+    outline: 0;
+    box-shadow: none!important;
+}
+.sitmap .accordion-button{ 
+    background-color: #477c47;
+}
+.hding-sitemsrvs span {
+    background: #477c47;
+    width: 250px;
+    margin-right: 50px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 0 0 70px 0;
+}
+.hding-sitemsrvs {
+    font-size: 24px;
+    font-weight: bold;
+}
