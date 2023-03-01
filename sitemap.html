@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Number Dekho</title>
+  <!--************************* Bootstrap CDN ************************** -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--************************ Custome Style Sheet ************** -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+  <!--*********************** Header *********************** -->
+  <header class=" bg-white" id="navbar">
+    <nav class="navbar navbar-expand-lg p-0">
+      <div class="container">
+        <a class="navbar-brand d-none d-lg-block" href="javascript:void(0);">
+          <img src="assets/image/logo23.svg" alt="......">
+        </a>
+        <!-- mobile View Toggel/user Profile icon-->
+        <div class="mobile-Navbar d-flex justify-content-center align-items-center d-lg-none" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <img src="https://www.numberdekho.com/public/storage/settings/appicon.png">
+        </div>
+
+        <a class="nav-brand d-flex flex-column  d-lg-none">
+          <i class="fas fa-map-marker-alt mx-auto mt-3 fs-4" style="color:green;"></i>
+          <button class="btn dropdown-toggle p-0" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"><span
+              id="address_value_mobile"></span></button>
+        </a>
+        <ul class="d-block d-lg-none mb-0">
+          <li>
+            <a href="https://www.numberdekho.com/notification_list">
+              <img src="https://www.numberdekho.com/public/assets/front/images/Bell.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+            </a>
+          </li>
+        </ul>
+        <!-- mobile View Toggel/user Profile icon End-->
+        <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarSupportedContent">
+          <ul class="navbar-nav d-flex align-items-center ms-auto ">
+            <li class=" me-3">
+              <button class="btn bg-green text-white rounded hover-bg-green" style="padding: 12px 25px;"><a
+                  href="https://play.google.com/store/apps/details?id=com.numberdekho" target="_blank"
+                  class="fw-bold text-white">
+                  Register Your Business
+                </a></button>
+            </li>
+            <li class="d-flex align-items-center">
+              <a href="https://www.numberdekho.com/login" class=" fw-bolder hover-green">
+                <i class="fas fa-sign-in-alt me-1 color-green"></i>Sign In
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile View navbar -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+      style="width:320px">
+      <div class="offcanvas-header p-0">
+        <a href="https://www.numberdekho.com/my-profile">
+          <div class="left-slidebar-img-box  d-flex justify-content-center align-items-center d-lg-none">
+            <img src="https://www.numberdekho.com/public/storage/settings/appicon.png" style="border-radius: 100%;"
+              width="50" height="50">
+          </div>
+        </a>
+      </div>
+      <div class="offcanvas-body p-0">
+
+        <ul class="nav-menu d-lg-none d-block p-0">
+          <li class="">
+            <a href="javascript:void(0);" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/office bag.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              My Business</a></li>
+          <li class="#"><a href="javascript:void(0);" onclick="close_sidebar()" data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasBottom1" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/Activity.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              List Your Business</a></li>
+          <li class=""><a href="javascript:void(0);" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/Vector.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              Activity</a></li>
+          <li class=""><a href="javascript:void(0);" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/call.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              Call History</a></li>
+          <li class=""><a href="javascript:void(0);" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/fi_settings.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              Settings</a></li>
+          <li class=""><a href="javascript:void(0);" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/Heart.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              Favorites</a></li>
+
+          <li class=""><a href="tel:8585952324" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/telephone-call.png"
+                class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+              Customer Support</a></li>
+
+          <li class=""><a href="https://api.whatsapp.com/send?phone=8585952324&amp;text=Hi"
+              class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/telephone-call.png"
+                class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+              What'sApp Support</a></li>
+
+          <li class=""><a href="tel:8585952324" class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/telephone-call.png"
+                class="img-fluid me-3 " alt="..." style="width:25px; height:25px;">
+              Call To Register</a></li>
+
+          <li class=""><a onclick="close_sidebar()" class="d-flex align-items-center" data-bs-toggle="modal"
+              data-bs-target="#chnagelanguage">
+              <img src="https://www.numberdekho.com/public/assets/front/images/language.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              Change Language</a></li>
+
+          <li class=" "><a href="https://play.google.com/store/apps/details?id=com.numberdekho"
+              class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/share.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              Share the App</a></li>
+          <li class=" "><a href="https://play.google.com/store/apps/details?id=com.numberdekho"
+              class="d-flex align-items-center">
+              <img src="https://www.numberdekho.com/public/assets/front/images/star.png" class="img-fluid me-3 "
+                alt="..." style="width:25px; height:25px;">
+              Rate Us</a></li>
+          <!--  -->
+        </ul>
+        <div class=" text-center d-md-none d-flex border py-2 justify-content-center align-items-center">
+          <a href="javascript:void(0);" class="mobile-menu-social-icon">
+            <img src="https://www.numberdekho.com/public/assets/front/images/f-book.png" class="img-fluid me-3 "
+              alt="...">
+          </a>
+          <a href="javascript:void(0);" class="mobile-menu-social-icon">
+            <img src="https://www.numberdekho.com/public/assets/front/images/insta.png" class="img-fluid me-3 "
+              alt="...">
+          </a>
+          <a href="javascript:void(0);" class="mobile-menu-social-icon">
+            <img src="https://www.numberdekho.com/public/assets/front/images/twiter.png" class="img-fluid me-3 "
+              alt="...">
+          </a>
+        </div>
+        <div class=" text-center d-md-none d-block">
+          <a href="javascript:void(0);" class="btn bg-green mt-3 rounded text-white ">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            Login
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+
+    <!-- Location slector Bottom Canva -->
+    <div class="offcanvas offcanvas-bottom bottom-canva" tabindex="-1" id="offcanvasBottom"
+      aria-labelledby="offcanvasBottomLabel" aria-modal="true" role="dialog">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasBottomLabel">Select a Location</h5>
+      </div>
+      <div class="offcanvas-body small">
+        <form>
+          <div class="d-flex mb-4 p-0 align-itmes-center border-dark border" role="search"
+            style="border:1px solid #e4e4e4; background: #FEFDFE;">
+            <button class="d-flex justify-content-center align-items-center btn me-2" type="submit"
+              style="border-right:1px solid #e4e4e4;"><i class="fas fa-search"></i></button>
+            <input class="form-control cus-form bg-none" type="text" id="addressTextField" placeholder="Search..."
+              aria-label="Search" autocomplete="off">
+          </div>
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label fs-4"><i
+                class="fas fa-map-marker-alt fs-4 me-2"></i>Use
+              Current
+              Loaction</label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </header>
+
+<!-- *********************** Go to The Top  *************** -->  
+<button class="btn " onclick="topFunction()" id="myBtn" style="height:40px;"><i class="bi bi-arrow-up-circle fs-2 color-green"></i></button>
+<!-- *********************** Go to The Top  *************** -->  
+  <section class="sitemap-banner-img">
+    <div class="container  height">
+        <div class="row   align-items-center height">
+            <div class="col-12 text-center"> 
+                <h3 class="text-white rounded">SiteMap</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<!--============================== site map container===================== -->
+<section class="sec-bg py-md-5 py-3 px-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="accordion sitmap border-0" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item mb-5 bg-white shadow-lg">
+                        <div class="row ">
+                           <div class="col-12">
+                            <div class="sitemap-step sitemap-step1">
+                                <div class="hding-sitemsrvs d-flex align-items-center"><span> </span> Popular Services Categories</div>
+                             </div>
+                           </div> 
+                        </div> 
+                            <div class="p-3">
+                                <h3 class="color-green">Popular Services</h3>
+                            </div> 
+                        
+                      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                           <div class="row">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+
+                                </ul>
+                            </div> 
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="javascript:void(0);">Electrician</a>
+                                    </li>
+                                    
+                                </ul>
+                            </div> 
+                           </div>
+                        </div>
+                      </div>
+                      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button rounded-bottom rounded-top-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                         View All
+                        </button>
+                      </h2>
+                    </div>
+                    <div class="accordion-item mb-5 bg-white shadow-lg">
+                        <div class="row ">
+                           <div class="col-12">
+                            <div class="sitemap-step sitemap-step1">
+                                <div class="hding-sitemsrvs d-flex align-items-center"><span> </span> Popular Shop Categories</div>
+                             </div>
+                           </div> 
+                        </div> 
+                            <div class="p-3">
+                                <h3 class="color-green">Popular Shop</h3>
+                            </div> 
+                      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                    </ul>
+                                </div> 
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div> 
+                               </div>
+                        </div>
+                      </div>
+
+                      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed rounded-bottom rounded-top-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            View All
+                        </button>
+                      </h2>
+
+                    </div>
+                    <div class="accordion-item mb-5 bg-white shadow-lg">
+                        <div class="row ">
+                           <div class="col-12">
+                            <div class="sitemap-step sitemap-step1">
+                                <div class="hding-sitemsrvs d-flex align-items-center"><span> </span> Popular Outlet Category</div>
+                             </div>
+                           </div> 
+                        </div> 
+                            <div class="p-3">
+                                <h3 class="color-green">Popular Outlet</h3>
+                            </div> 
+                      <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                            <div class="row">
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                    </ul>
+                                </div> 
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-3">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+    
+                                        <li>
+                                            <a href="javascript:void(0);">Electrician</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div> 
+                               </div>
+                        </div>
+                      </div>
+                      <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed rounded-bottom rounded-top-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            View All
+                        </button>
+                      </h2>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section> 
+
+   <!--************************* Footer ========================== -->
+   <footer class="light-footer skin-light-footer style-2 d-none d-md-block">
+    <div class="footer-middle">
+        <div class="container">
+            <div class="row ">
+
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                    <div class="footer_widget">
+                        <img src="https://www.numberdekho.com/public/assets/front/img/logo.png" class="img-footer small mb-2" alt="">
+
+                        <div class="address mt-2">
+                            NumberDekho is a local search engine for different service providers' contact information
+                            like mobile numbers and addresses. User can also list their business to maximise their
+                            visibility.
+
+                        </div>
+                        <div class="address mt-3">
+                            <a href="mailto:info@numberdekho.com"><i class="fa fa-envelope fs-6 me-2 theme-cl" aria-hidden="true"></i>info@numberdekho.com</a> <br>
+                            <a href="tel:8585952324"><i class="fa fa-phone fs-6 me-2 theme-cl" aria-hidden="true"></i>&nbsp;8585952324</a>
+                        </div>
+                        <div class="address mt-2">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="https://www.facebook.com/NumberDekho" class="theme-cl"><i class="lni lni-facebook-filled fs-2"></i></a></li>
+                                <li class="list-inline-item"><a href="https://twitter.com/NumberDekho" class="theme-cl"><i class="lni lni-twitter-filled fs-2"></i></a></li>
+                                <!-- <li class="list-inline-item"><a href="#" class="theme-cl"><i class="lni lni-youtube"></i></a></li> -->
+                                <li class="list-inline-item"><a href="https://www.instagram.com/numberdekho/" class="theme-cl"><i class="lni lni-instagram-filled fs-2"></i></a></li>
+                                <li class="list-inline-item"><a href="https://in.linkedin.com/company/numberdekho" class="theme-cl"><i class="lni lni-linkedin-original fs-2"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+                    <!-- <div class="footer_widget">
+      <h4 class="widget_title">About Company</h4>
+      <ul class="footer-menu">
+       <li><a href="#">Who We'r?</a></li>
+       <li><a href="#">Our Mission</a></li>
+       <li><a href="#">Our team</a></li>
+       <li><a href="https://www.numberdekho.com/contact-us">Contact Us</a></li>
+       <li><a href="https://www.numberdekho.com/privacy-policy">Privacy Policy</a></li>
+       <li><a href="https://www.numberdekho.com/terms">Terms and Condition</a></li>
+      </ul>
+     </div> -->
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    <div class="footer_widget">
+                        <h4 class="widget_title">Quick Links</h4>
+                        <ul class="footer-menu">
+
+                            <li><a href="https://www.numberdekho.com">Home</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="https://www.numberdekho.com/disclaimer">Disclaimer</a></li>
+                            <li><a href="https://www.numberdekho.com/about-us">About Us</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    <div class="footer_widget">
+                        <h4 class="widget_title">Our Service Category</h4>
+                        <ul class="footer-menu">
+                                                        <li><a href="https://www.numberdekho.com/service/lift-service">Lift service</a></li>
+                                                        <li><a href="https://www.numberdekho.com/service/maid">Maid</a></li>
+                                                        <li><a href="https://www.numberdekho.com/service/car-driving-school">Car Driving School</a></li>
+                                                        <li><a href="https://www.numberdekho.com/service/tiffin-service">Tiffin Service</a></li>
+                                                        <li><a href="https://www.numberdekho.com/service/gym-trainer">Gym Trainer</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    <div class="footer_widget">
+                        <h4 class="widget_title">Our Shop Category</h4>
+                        <ul class="footer-menu">
+                                                        <li><a href="https://www.numberdekho.com/shop/party-planner">Party Planner</a></li>
+                                                        <li><a href="https://www.numberdekho.com/shop/wedding-planner">Wedding Planner</a></li>
+                                                        <li><a href="https://www.numberdekho.com/shop/bar-and-lounge">Bar and Lounge</a></li>
+                                                        <li><a href="https://www.numberdekho.com/shop/scrap">Scrap</a></li>
+                                                        <li><a href="https://www.numberdekho.com/shop/skating-classes">Skating Classes</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12">
+                    <div class="footer_widget">
+                        <h4 class="widget_title">About Company</h4>
+                        <ul class="footer-menu">
+                            <li><a href="https://www.numberdekho.com/contact-us">Contact Us</a></li>
+                            <li><a href="https://www.numberdekho.com/privacy-policy">Privacy Policy</a></li>
+                            <li><a href="https://www.numberdekho.com/terms">Terms and Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom br-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 col-md-12 text-center">
+                    <p class="mb-0">© 2023 Number Dekho. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!--********************************* Mobile View Menu Bar ******************************-->
+  <div class="d-block d-md-none position-fixed bottom-0 start-0 w-100  bg-white bottom-nav">
+    <ul class="d-flex justify-content-between align-items-center w-100 px-2 mb-0 bottom-nav-list">
+      <li class="flex-grow-1 footeractive">
+        <a aria-current="page" href="javascript:void(0);"
+          class="d-flex justify-content-center align-itmes-center flex-column">
+          <img src="https://www.numberdekho.com/public/assets/front/images/homes/homeactive.png" height="21" width="21">
+        </a>Home
+      </li>
+      <li class="p-1 rounded flex-grow-1 ">
+        <a href="javascript:void(0); ">
+          <img src="https://www.numberdekho.com/public/assets/front/images/homes/shop.png" height="24" width="24">
+        </a>Shops
+      </li>
+      <li class="position-relative flex-grow-1 " style="bottom:25px">
+        <a href="javascript:void(0);" class="addbusiness-icon" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasBottom1" aria-controls="offcanvasBottom1">
+          <i class="fas fa-plus fs-3"></i>
+        </a>
+        <span class="text-center" style="line-height:1;">Add<br>Business</span>
+      </li>
+      <li class=" flex-grow-1">
+        <a aria-current="page" href="javascript:void(0);">
+          <img src="https://www.numberdekho.com/public/assets/front/images/homes/service.png" height="24" width="24">
+        </a>Services
+      </li>
+      <li class=" flex-grow-1 ">
+        <a href="javascript:void(0);">
+          <img src="https://www.numberdekho.com/public/assets/front/images/homes/explore.png" height="24" width="24">
+
+        </a>Explore
+      </li>
+    </ul>
+  </div>
+  <!-- mobile view menu bottom Canva -->
+  <div class="offcanvas offcanvas-bottom bottom-canva" tabindex="-1" id="offcanvasBottom1"
+    aria-labelledby="offcanvasBottomLabel" aria-hidden="true">
+    <div class="offcanvas-header justify-content-center">
+
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel1">What do you want to Register?</h5>
+    </div>
+    <div class="offcanvas-body small text-center">
+      <a href="https://play.google.com/store/apps/details?id=com.numberdekho" target="_blank"><button
+          class="btn btn-outline-dark w-75 mb-2 border-radius">
+          <img src="https://www.numberdekho.com/public/assets/front/images/modal-shop.png" height="21" width="21"
+            class="me-3">Shop</button>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.numberdekho" target="_blank"><button
+          class="btn btn-outline-dark w-75 border-radius">
+          <img src="https://www.numberdekho.com/public/assets/front/images/modal-service.png" height="21" width="21"
+            class="me-3">Services</button>
+      </a>
+
+    </div>
+  </div>
+  <!--***************** javaScript And jquery CDN *******************-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+  </script>
+  <script src="assets/js/custome.js"></script>
+
+</body>
+
+</html>
