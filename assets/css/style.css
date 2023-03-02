@@ -217,6 +217,7 @@ body {
 .sec-heading-title {
     color: #313030;
 }
+
 /*======== ovbject fit========  */
 /* ======== Hover ========*/
 .hover-green:hover {
@@ -268,6 +269,7 @@ body {
     border-radius: 100%;
     margin: 12px 15px 12px 26px;
 }
+
 /* ================================ Go to the top ================================ */
 #myBtn {
     /* display: none; */
@@ -279,11 +281,12 @@ body {
     border: none;
     outline: none;
     background-color: #fff;
-    color:  #fff;
+    color: #fff;
     cursor: pointer;
-    padding: 0px!important;
-    
-  } 
+    padding: 0px !important;
+
+}
+
 /* ================================ Go to The top  ================================ */
 /*================================ Home Page style ================================ */
 
@@ -620,7 +623,7 @@ ul.list-inline li {
 
 .bottom-nav {
     box-shadow: 0px -3px 2px 0px #eeeeee;
-    z-index: 100000; 
+    z-index: 100000;
 }
 
 .bottom-nav-list {
@@ -654,7 +657,7 @@ ul.list-inline li {
 /* ========================================================================
                          Service listing page style
 ============================================================================*/
- 
+
 
 .input-group {
     position: relative;
@@ -676,9 +679,10 @@ ul.list-inline li {
     box-shadow: none !important;
     outline: none !important;
 }
-.input-group> .btn{
-     height: 45px !important;  
-    
+
+.input-group>.btn {
+    height: 45px !important;
+
 }
 
 .input-group>.form-control,
@@ -1120,68 +1124,18 @@ span.verified-badge {
     height: 100% !important;
 }
 
- 
-
-/* .ndprocced-flow .nav-link.active {
-    background: none!important;
-}
-.ndprocced-flow .nav-link.active span.ndproceesBtn {
-    background: #18A10B!important;
-    color: #fff!important;
-} 
-  */
-/* .ndbdre-prosecclft {
-    position: relative;
-}
-.ndbdre-prosecclft:before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 16px;
-    height: 92%;
-    width: 2px;
-    background: #E1F3DF;
-}
-.ndprocced-flow .nav-link {
-    position: relative;
-    padding: 0;
-    width: 100%;
-    text-align: right;
-}
-.ndproceesNum{
-    width: 19px;
-    height: 32px;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 32px;
-    box-shadow: 0 0 0 7px #e1f3df;
-    font-size: 13px;
-}
-.ndprocessbtn{
-    width: 91%;
-    margin-left: 9%;
-    font-size: 13px;
+.ndprocced-flow .nav-link.active {
+    background: none;
 }
 
-.ndprocced-flow span.ndproceesNum {
-    width: 32px;
-    height: 32px;
-    display: inline-block;
-    font-weight: bold;
-    line-height: 32px;
-    border-radius: 50px;
-    box-shadow: 0 0 0 12px #e1f3df;
-    background: #C7E9C5;
-    color: #18A10B;
-    text-align: center;
-    font-size: 22px;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+.ndprocced-flow .nav-link.active span.nd-processbtn {
+    background-color: #008000; 
+    color:var(--section-bg);
 }
-.ndprocced-flow .nav-link span.ndproceesBtn {
-    display: inline-block;
+
+.ndprocced-flow span.nd-processbtn {
+    display: flex;
+    align-items: center;
     padding: 14px 20px;
     border-radius: 5px;
     background: #fff;
@@ -1192,8 +1146,51 @@ span.verified-badge {
     font-weight: 600;
     color: #333;
     text-align: left;
+}
+.ndbdre-prosecclft{
+    position: relative;
+}
+/* .ndbdre-prosecclft::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 31px;
+    height: 92%;
+    width: 2px;
+    background: #E1F3DF;
 } */
-
+.ndprocced-flow span.proceesNum {
+    width: 63px;
+    height: 32px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 32px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 12px #e1f3df;
+    background: #C7E9C5;
+    color: #18A10B;
+    text-align: center;
+    font-size: 22px; 
+}
+.ndprocced-flow .nav-link.active span.proceesNum {
+    background: #18A10B;
+    color: #fff;
+}
+.hding2 h2 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #343a40;
+}
+span.arrow-down-prosecc {
+    text-align: right;
+    margin-left: 3%;
+    position: relative;
+    bottom: -20px;
+}
+.proceesTextPera p {
+    padding: 30px 0 0;
+}
+ 
 /* ========================================================================
                             sitemap Page
 ============================================================================*/
@@ -1205,17 +1202,22 @@ span.verified-badge {
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .accordion.sitmap {
-    --bs-accordion-border-width: none!important;
+    --bs-accordion-border-width: none !important;
 }
-.sitmap .accordion-button:focus { 
-    border-color: none!important;;
+
+.sitmap .accordion-button:focus {
+    border-color: none !important;
+    ;
     outline: 0;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
-.sitmap .accordion-button{ 
+
+.sitmap .accordion-button {
     background-color: #477c47;
 }
+
 .hding-sitemsrvs span {
     background: #477c47;
     width: 250px;
@@ -1226,6 +1228,7 @@ span.verified-badge {
     display: inline-block;
     border-radius: 0 0 70px 0;
 }
+
 .hding-sitemsrvs {
     font-size: 24px;
     font-weight: bold;
